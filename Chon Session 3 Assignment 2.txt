@@ -1,0 +1,31 @@
+def get_length():
+    print("What is the length of the rectangle?")
+    length = int(input())
+    return length
+
+def get_width():
+    print("What is the width of the rectangle?")
+    width = int(input())
+    return width
+
+def get_area(length, width):
+    area = length * width
+    return area
+
+def get_perimeter(length, width):
+    perimeter = 2 * length + 2 * width
+    return perimeter
+
+
+def display_measurement(area, perimeter):
+    print("The area is " + str(area))
+    print("The perimeter is " + str(perimeter))
+
+def main():
+    length = get_length()
+    width = get_width()
+    area = get_area(length, width)
+    perimeter = get_perimeter(length, width)
+    display_measurement(area, perimeter)
+
+main()

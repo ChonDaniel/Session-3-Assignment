@@ -1,0 +1,14 @@
+def get_name():
+    print ("What is your name?")
+    name = input()
+    return name
+    
+def display_hello(name):
+    print ("Hello " + name + "!")
+    
+def main():
+    name = get_name()
+    display_hello(name)
+    
+main()
+    

@@ -1,0 +1,54 @@
+Function Main
+    Declare items
+    Declare price
+    Declare cost
+    Declare tax
+    Declare total
+    Assign items = get_item()
+    Assign price = get_price()
+    Assign cost = Cost(items, price)
+    Assign tax = Tax(cost)
+    Assign total = Total(cost, tax)
+    Call Display(items, price, cost, tax, total)
+End
+
+
+Function get_item()
+    Declare items
+    Output "How many items do you have?"
+    Input items
+Return items
+
+
+Function get_price()
+    Declare price
+    Output "What is the price per item?"
+    Input price
+Return price
+
+
+Function Cost (items, price)
+    Declare cost
+    Assign cost = items * price
+Return cost
+
+
+Function Tax (cost)
+    Declare tax
+    Assign tax = cost * 0.07
+Return tax
+
+
+Function Total (cost, tax)
+    Declare total
+    Assign total = cost + tax
+Return total
+
+
+Function Display (items, price, cost, tax, total)
+    Output "You have " & items & " items."
+    Output "Each items costs $" & price
+    Output "The cost excluding tax is $" & cost
+    Output "Sales tax: $" & tax
+    Output "Your total is $" & total
+End

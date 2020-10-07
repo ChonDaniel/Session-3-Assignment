@@ -1,0 +1,39 @@
+def get_item():
+    print("How many items do you have?")
+    items = int(input())
+    return items
+
+def get_price():
+    print("What is the price per item?")
+    price = int(input())
+    return price
+    
+def Cost(items, price):
+    cost = items * price
+    return cost
+
+def Tax(cost):
+    tax = cost * 0.07
+    tax = round(tax, 2)
+    return tax
+
+def Total(cost, tax):
+    total = cost + tax
+    return total
+    
+def Display(items, price, cost, tax, total):
+    print("You have " + str(items) + " items.")
+    print("Each items costs $" + str(price))
+    print("The cost excluding tax is $" + str(cost))
+    print("Sales tax: $" + str(tax))
+    print("Your total is $" + str(total))
+
+def main():
+    items = get_item()
+    price = get_price()
+    cost = Cost(items, price)
+    tax = Tax(cost)
+    total = Total(cost, tax)
+    Display(items, price, cost, tax, total)
+    
+main()
